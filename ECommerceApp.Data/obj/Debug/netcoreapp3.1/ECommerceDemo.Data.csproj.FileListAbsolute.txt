@@ -1,0 +1,12 @@
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.deps.json
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.dll
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.pdb
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.csprojAssemblyReference.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.AssemblyInfoInputs.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.AssemblyInfo.cs
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.csproj.CoreCompileInputs.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.dll
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.pdb
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.runtimeconfig.json
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.runtimeconfig.dev.json
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Data\obj\Debug\netcoreapp3.1\ECommerceDemo.Data.genruntimeconfig.cache

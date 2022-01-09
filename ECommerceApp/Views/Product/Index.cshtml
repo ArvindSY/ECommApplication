@@ -1,0 +1,271 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+@model ECommerceApp.Models.ProductViewModel
+@Html.AntiForgeryToken()
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link font-weight-bold" data-toggle="collapse" style="color:black;" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Product Detail
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Category</label>
+                        <select class="form-control" asp-for="Product.ProdCatId" asp-items="@(new SelectList(Model.Category,"ProdCatId","CategoryName",Model.Product.ProdCatId))" onchange="LoadAttribute()">
+                            <option value="0">Choose Category</option>
+                        </select>
+                        <input type="hidden" asp-for="Product.ProductId" value="@Model.Product.ProductId" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Product</label>
+                        <input type="text" class="form-control" asp-for="Product.ProdName" maxlength="250" placeholder=" Enter Product Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Product Description</label>
+                    <textarea class="form-control" asp-for="Product.ProdDescription" rows="3" placeholder="Enter Product Description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed font-weight-bold" data-toggle="collapse" style="color:black;" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Product Attribute
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label>Attribute</label>
+                        <select class="form-control" id="ddlAttribute">
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>Value</label>
+                        @Html.TextBox("txtAttributeValue", "", new { @class = "form-control", maxlength = 250 })
+                    </div>
+                    <div class="form-group col-md-4 text-center">
+                        <button type="button" class="btn btn-success" id="btnAddAttr" onclick="AddAttribute()">Add</button>
+                        <button type="button" class="btn btn-danger" onclick="ClearAttribute()">Clear</button>
+                        @Html.Hidden("hdnAttFlg")
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        @Html.Partial("_ProductAttribute", Model.AttributeMapping)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="float-right">
+    <button type="button" class="btn btn-primary" id="SaveProduct">Save</button>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Cancel</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body" id="dvMessage">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick='window.location.href="/Product/Index"'>Close &amp; Continue</button>
+                <a class="btn btn-secondary" asp-action="Index" asp-controller="Home">Close &amp; Go To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messageAttrModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                Please enter atlease one attribute detail.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+
+        var addAntiForgeryToken = function (data) {
+            data.__RequestVerificationToken = $("[name='__RequestVerificationToken']").val();
+            return data;
+        };
+
+        $(document).ready(function () {
+            $("#SaveProduct").click(function () {
+                var isValid = true;
+                $('#Product_ProdCatId,#Product_ProdName').each(function () {
+                    if ($.trim($(this).val()) == '' || $.trim($(this).val()) == '0') {
+                        isValid = false;
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        });
+                    }
+                    else {
+                        $(this).css({
+                            "border": "",
+                            "background": ""
+                        });
+                    }
+                });
+
+                if (isValid == true &&  $("#tblProductAttribute tbody tr").length == 0) {
+                    isValid = false;
+                    $("#messageAttrModal").modal('show');
+
+                }
+
+                if (isValid == true) {
+                    var productViewModel = {}
+                    var product = {}
+                    product.ProdCatId = $("#Product_ProdCatId").val();
+                    product.CategoryName = $("#Product_ProdCatId :selected").text();
+                    product.ProdName = $("#Product_ProdName").val();
+                    product.ProdDescription = $("#Product_ProdDescription").val();
+                    product.ProductId = $("#Product_ProductId").val();
+                    productViewModel.product = product;
+                    var ProductAtt = [];
+                    $("#tblProductAttribute tbody tr").each(function (i, val) {
+                        var attributeDetail = {};
+                        attributeDetail.ProductAttrId = $(val).find('#hdnProductAttrId').val();
+                        attributeDetail.AttributeId = $(val).find('#hdnAttributeId').val();
+                        attributeDetail.AttributeName = $(val).find('td').eq('0').text();
+                        attributeDetail.AttributeValue = $(val).find('td').eq('1').text();
+                        ProductAtt.push(attributeDetail)
+                    })
+
+                    productViewModel.ProductAttribute = ProductAtt;
+
+                    $.post('@Url.Action("Create","Product")', addAntiForgeryToken({ productViewModel: productViewModel }))
+                        .done(function (qXHR, textStatus, errorThrown) {
+                            if (qXHR.statusCode == 500) {
+                                window.location.href = "Home/Error";
+                            }
+                            else {
+                                $("#dvMessage").html(qXHR.message);
+                                $("#messageModal").modal('show');
+                            }
+                        }
+
+                        ).fail(function (jqXHR, textStatus, errorThrown) {
+                            window.location.href = "Home/Error";
+                        })
+                }
+                })
+
+            LoadAttribute();
+
+    });
+
+    function LoadAttribute() {
+        $("#ddlAttribute").empty();
+        $.get('@Url.Action("GetAllAttributeLookUp","Product")', { categoryId: $("#Product_ProdCatId").val() }, function (response) {
+            if (response != null) {
+                $("#ddlAttribute").append($('<option></option>').val(0).html("--Select--"));
+                $(response).each(function (index, obj) {
+                    $("#ddlAttribute").append($('<option></option>').val(obj.attributeId).html(obj.attributeName));
+                });
+            }
+        })
+    }
+
+    function EditData(attributeId, event) {
+        $("#ddlAttribute").val($.trim(attributeId))
+        $("#ddlAttribute").attr('disabled')
+        $("#txtAttributeValue").val($(event).closest('tr').find('td:eq(1)').text())
+        $("#hdnAttFlg").val("E")
+    }
+
+    function AddAttribute() {
+        var isValid = true;
+        $('#ddlAttribute,#txtAttributeValue').each(function () {
+            if ($.trim($(this).val()) == '' || $.trim($(this).val()) == '0') {
+                isValid = false;
+                $(this).css({
+                    "border": "1px solid red",
+                    "background": "#FFCECE"
+                });
+            }
+            else {
+                $(this).css({
+                    "border": "",
+                    "background": ""
+                });
+            }
+        });
+        if (isValid == true) {
+            var checkRecords = 0;
+            if ($("#hdnAttFlg").val() == "A") {
+                if ($("#tblProductAttribute tbody tr").length > 0) {
+                    $("#tblProductAttribute tbody tr").each(function () {
+                        if ($(this).find("#hdnAttributeId").val() == $('#ddlAttribute').val()) {
+                            checkRecords = 1;
+                            return false;
+                        }
+                    })
+                }
+            }
+            if (checkRecords==1) {
+                ShowMessage("Attribute already exists!!", "Error");
+                return false;
+            }
+            else {
+                if ($("#hdnAttFlg").val() == "E") {
+                    $("#tblProductAttribute tbody tr").each(function () {
+                        if ($(this).find("#hdnAttributeId").val() == $('#ddlAttribute').val()) {
+                            $(this).find('td:eq(1)').text($("#txtAttributeValue").val());
+                        }
+                    })
+                }
+                else {
+                    myTable = $("#tblProductAttribute tbody");
+                    var rowHtml = '<tr><td>' + $('#ddlAttribute :selected').text() + '</td><td class="text-break">' + $("#txtAttributeValue").val() + '</td><td><a class="btn btn-primary" onclick=EditData("' + $('#ddlAttribute :selected').val() + '",this);>Edit</a><input id="hdnAttributeId" type="hidden" value="' + $('#ddlAttribute').val() + '" /><input id="hdnProductAttrId"  type="hidden" value="0"></td></tr>'
+                    myTable.append(rowHtml);
+                    $("#hdnAttFlg").val("A");
+                }
+            }
+        }
+        ClearAttribute();
+        }
+
+    function ClearAttribute() {
+        $('#ddlAttribute').val('0')
+        $('#ddlAttribute').removeAttr('disabled')
+        $("#txtAttributeValue").val('')
+    }
+
+    </script>
+}
+
+
+

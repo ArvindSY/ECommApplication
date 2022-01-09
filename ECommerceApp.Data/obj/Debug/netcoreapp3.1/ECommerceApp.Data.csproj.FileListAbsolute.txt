@@ -1,0 +1,11 @@
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\bin\Debug\netcoreapp3.1\ECommerceApp.Data.deps.json
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\bin\Debug\netcoreapp3.1\ECommerceApp.Data.runtimeconfig.json
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\bin\Debug\netcoreapp3.1\ECommerceApp.Data.runtimeconfig.dev.json
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\bin\Debug\netcoreapp3.1\ECommerceApp.Data.dll
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\bin\Debug\netcoreapp3.1\ECommerceApp.Data.pdb
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.AssemblyInfoInputs.cache
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.AssemblyInfo.cs
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.csproj.CoreCompileInputs.cache
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.dll
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.pdb
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Data\obj\Debug\netcoreapp3.1\ECommerceApp.Data.genruntimeconfig.cache

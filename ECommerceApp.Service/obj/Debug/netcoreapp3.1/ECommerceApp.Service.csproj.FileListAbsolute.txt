@@ -1,0 +1,12 @@
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\bin\Debug\netcoreapp3.1\ECommerceApp.Service.deps.json
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\bin\Debug\netcoreapp3.1\ECommerceApp.Service.dll
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\bin\Debug\netcoreapp3.1\ECommerceApp.Service.pdb
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\bin\Debug\netcoreapp3.1\ECommerceApp.Data.dll
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\bin\Debug\netcoreapp3.1\ECommerceApp.Data.pdb
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.csprojAssemblyReference.cache
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.AssemblyInfoInputs.cache
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.AssemblyInfo.cs
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.csproj.CoreCompileInputs.cache
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.csproj.CopyComplete
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.dll
+C:\Arvind\faltu\Nanaji chat\ECommerceDemo\ECommerceApp.Service\obj\Debug\netcoreapp3.1\ECommerceApp.Service.pdb

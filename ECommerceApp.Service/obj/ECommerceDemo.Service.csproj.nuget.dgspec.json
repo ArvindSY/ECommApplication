@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Service\\ECommerceDemo.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\ECommerceDemo.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\ECommerceDemo.Data.csproj",
+        "projectName": "ECommerceDemo.Data",
+        "projectPath": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\ECommerceDemo.Data.csproj",
+        "packagesPath": "C:\\Users\\mitul\\.nuget\\packages\\",
+        "outputPath": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mitul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://103.47.184.246:85/guestAuth/app/nuget/feed/_Root/CoreServer/v1": {},
+          "http://172.16.204.115/guestAuth/app/nuget/v1/FeedService.svc/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Service\\ECommerceDemo.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Service\\ECommerceDemo.Service.csproj",
+        "projectName": "ECommerceDemo.Service",
+        "projectPath": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Service\\ECommerceDemo.Service.csproj",
+        "packagesPath": "C:\\Users\\mitul\\.nuget\\packages\\",
+        "outputPath": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mitul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://103.47.184.246:85/guestAuth/app/nuget/feed/_Root/CoreServer/v1": {},
+          "http://172.16.204.115/guestAuth/app/nuget/v1/FeedService.svc/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\ECommerceDemo.Data.csproj": {
+                "projectPath": "C:\\Arvind\\Personal\\Contrado\\Mitul\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Data\\ECommerceDemo.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

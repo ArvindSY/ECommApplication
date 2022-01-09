@@ -1,0 +1,12 @@
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\bin\Debug\netcoreapp3.1\ECommerceDemo.Service.deps.json
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\bin\Debug\netcoreapp3.1\ECommerceDemo.Service.dll
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\bin\Debug\netcoreapp3.1\ECommerceDemo.Service.pdb
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.csprojAssemblyReference.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.AssemblyInfoInputs.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.AssemblyInfo.cs
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.csproj.CoreCompileInputs.cache
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.dll
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.pdb
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.dll
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\bin\Debug\netcoreapp3.1\ECommerceDemo.Data.pdb
+E:\Mitul\ECommerceDemo\ECommerceDemo\ECommerceDemo.Service\obj\Debug\netcoreapp3.1\ECommerceDemo.Service.csproj.CopyComplete
